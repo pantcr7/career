@@ -11,7 +11,7 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="#top" class="logo">CareerHub</a>
+            <a href="#top" class="logo">{{company_name}}</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -93,62 +93,9 @@
                 <p>Explore our current job openings and find your perfect role</p>
             </div>
             <div class="jobs-grid">
-                <div class="job-card fade-in-up">
-                    <div class="job-header">
-                        <div>
-                            <h3 class="job-title">Senior Full Stack Developer</h3>
-                            <div class="job-details">
-                                <span class="job-detail">📍 Remote / San Francisco</span>
-                                <span class="job-detail">💼 Full-time</span>
-                                <span class="job-detail">💰 $120k - $180k</span>
-                            </div>
-                        </div>
-                        <span class="job-type">Engineering</span>
-                    </div>
-                    <p class="job-description">
-                        We're seeking an experienced full stack developer to join our engineering team. 
-                        You'll work on building scalable web applications using modern technologies and frameworks.
-                    </p>
-                    <a href="#contact" class="btn btn-primary">Apply Now</a>
-                </div>
-
-                <div class="job-card fade-in-up">
-                    <div class="job-header">
-                        <div>
-                            <h3 class="job-title">Data Scientist</h3>
-                            <div class="job-details">
-                                <span class="job-detail">📍 New York / Remote</span>
-                                <span class="job-detail">💼 Full-time</span>
-                                <span class="job-detail">💰 $130k - $190k</span>
-                            </div>
-                        </div>
-                        <span class="job-type">Data Science</span>
-                    </div>
-                    <p class="job-description">
-                        Join our data science team to build machine learning models and extract insights from complex datasets. 
-                        Strong Python and ML experience required.
-                    </p>
-                    <a href="#contact" class="btn btn-primary">Apply Now</a>
-                </div>
-
-                <div class="job-card fade-in-up">
-                    <div class="job-header">
-                        <div>
-                            <h3 class="job-title">Python Backend Engineer</h3>
-                            <div class="job-details">
-                                <span class="job-detail">📍 Austin / Remote</span>
-                                <span class="job-detail">💼 Full-time</span>
-                                <span class="job-detail">💰 $110k - $160k</span>
-                            </div>
-                        </div>
-                        <span class="job-type">Engineering</span>
-                    </div>
-                    <p class="job-description">
-                        We need a talented backend engineer to design and develop robust APIs and microservices. 
-                        Experience with Flask, Django, and cloud platforms is a plus.
-                    </p>
-                    <a href="#contact" class="btn btn-primary">Apply Now</a>
-                </div>
+                {% for job in jobs %}
+                    {% include 'job_card.html' %}
+                {% endfor %}
             </div>
         </div>
     </section>
