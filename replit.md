@@ -1,22 +1,26 @@
 # Career App
 
 ## Overview
-A Flask-based web application project set up in the Replit environment. This is a starter project ready for career-related features to be added.
+A professional Flask-based career opportunities website. The application showcases job openings, company information, required skills, and provides a modern, responsive user interface for potential candidates.
 
 ## Current State
 The application is fully configured and running with:
-- Basic Flask web server
-- Welcome page at the root route
+- Professional, modern career website with full responsive design
+- Navigation, hero section, about, skills showcase, job listings, and contact sections
+- Custom CSS styling with professional color scheme and animations
+- Mobile-friendly responsive layout
 - Development and production configurations
 
 ## Recent Changes
 **November 3, 2025**
-- Initialized Flask application
-- Set up Python 3.11 environment
-- Installed Flask and Gunicorn dependencies
-- Configured development workflow with auto-reload
-- Configured production deployment with Gunicorn
-- Created basic welcome page
+- Redesigned website with professional, modern UI/UX
+- Created comprehensive HTML template with semantic structure
+- Developed custom CSS with responsive design and animations
+- Implemented job listings section with multiple positions
+- Added skills showcase with visual cards
+- Integrated smooth scrolling and fade-in animations
+- Fixed navigation accessibility issues
+- Cleaned up unused files (main.py)
 
 ## Project Architecture
 
@@ -29,6 +33,11 @@ The application is fully configured and running with:
 ```
 .
 ├── app.py              # Main Flask application
+├── templates/          # HTML templates
+│   └── home.html       # Professional career website homepage
+├── static/             # Static assets
+│   ├── style.css       # Modern CSS styling
+│   └── carrer.jpg      # Hero image
 ├── .gitignore          # Python-specific gitignore
 ├── pyproject.toml      # Python dependencies (managed by uv)
 ├── uv.lock             # Dependency lock file
@@ -37,9 +46,17 @@ The application is fully configured and running with:
 ```
 
 ### Key Files
-- **app.py**: Main Flask application with a simple home route that returns an HTML welcome page
+- **app.py**: Main Flask application that renders the home template
   - Binds to 0.0.0.0:5000 for Replit proxy compatibility
   - Debug mode enabled for development
+- **templates/home.html**: Professional career website with sections for navigation, hero, about, skills, job listings, and contact
+  - Semantic HTML5 structure
+  - Smooth scrolling navigation
+  - Fade-in animations on scroll
+- **static/style.css**: Modern, responsive CSS styling
+  - CSS custom properties for theming
+  - Mobile-first responsive design
+  - Professional color scheme and typography
 
 ### Development
 - The Flask app runs in debug mode with auto-reload
