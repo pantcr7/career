@@ -3,16 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Webpage</title>
+    <meta name="description" content="Join our team and build your career with exciting opportunities">
+    <title>Career Opportunities | Join Our Team</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-    <h1>Welcome!</h1>
-    <p>This is a basic HTML template.</p>
-    <img src="http://www.htmldog.com/badge1.gif" width="120" height="90" alt="HTML Dog">
+<body id="top">
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#top" class="logo">CareerHub</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#jobs">Positions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content fade-in-up">
+            <h1>Build Your Future With Us</h1>
+            <p>Discover exciting career opportunities and join a team that values innovation, growth, and excellence</p>
+            <img src="{{ url_for('static', filename='carrer.jpg') }}" alt="Career Opportunities" class="hero-image">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>About Us</h2>
+                <p>Learn more about what we do and why you should join our team</p>
+            </div>
+            <div class="about-content fade-in-up">
+                <p>
+                    We are a dynamic and innovative company committed to excellence in everything we do. 
+                    Our team is passionate about creating cutting-edge solutions that make a real difference. 
+                    We foster a collaborative environment where creativity thrives, ideas are valued, and 
+                    every team member has the opportunity to grow and excel in their career.
+                </p>
+                <p style="margin-top: 1rem;">
+                    Join us in our mission to push boundaries, embrace challenges, and build products 
+                    that our customers love. We offer competitive compensation, comprehensive benefits, 
+                    and a culture that prioritizes work-life balance and professional development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" style="background: var(--bg-white);">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Required Skills</h2>
+                <p>The key competencies we're looking for in our candidates</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card fade-in-up">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>Experience with modern web technologies, frameworks, and best practices for building scalable applications</p>
+                </div>
+                <div class="skill-card fade-in-up">
+                    <div class="skill-icon">🐍</div>
+                    <h3>Python</h3>
+                    <p>Proficiency in Python programming, including frameworks like Django, Flask, and data processing libraries</p>
+                </div>
+                <div class="skill-card fade-in-up">
+                    <div class="skill-icon">📊</div>
+                    <h3>Data Analysis</h3>
+                    <p>Strong analytical skills with experience in data visualization, statistical analysis, and business intelligence</p>
+                </div>
+                <div class="skill-card fade-in-up">
+                    <div class="skill-icon">🤖</div>
+                    <h3>Machine Learning</h3>
+                    <p>Knowledge of ML algorithms, model training, and deployment using modern frameworks and tools</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Positions Section -->
+    <section id="jobs">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Open Positions</h2>
+                <p>Explore our current job openings and find your perfect role</p>
+            </div>
+            <div class="jobs-grid">
+                <div class="job-card fade-in-up">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Senior Full Stack Developer</h3>
+                            <div class="job-details">
+                                <span class="job-detail">📍 Remote / San Francisco</span>
+                                <span class="job-detail">💼 Full-time</span>
+                                <span class="job-detail">💰 $120k - $180k</span>
+                            </div>
+                        </div>
+                        <span class="job-type">Engineering</span>
+                    </div>
+                    <p class="job-description">
+                        We're seeking an experienced full stack developer to join our engineering team. 
+                        You'll work on building scalable web applications using modern technologies and frameworks.
+                    </p>
+                    <a href="#contact" class="btn btn-primary">Apply Now</a>
+                </div>
+
+                <div class="job-card fade-in-up">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Data Scientist</h3>
+                            <div class="job-details">
+                                <span class="job-detail">📍 New York / Remote</span>
+                                <span class="job-detail">💼 Full-time</span>
+                                <span class="job-detail">💰 $130k - $190k</span>
+                            </div>
+                        </div>
+                        <span class="job-type">Data Science</span>
+                    </div>
+                    <p class="job-description">
+                        Join our data science team to build machine learning models and extract insights from complex datasets. 
+                        Strong Python and ML experience required.
+                    </p>
+                    <a href="#contact" class="btn btn-primary">Apply Now</a>
+                </div>
+
+                <div class="job-card fade-in-up">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-title">Python Backend Engineer</h3>
+                            <div class="job-details">
+                                <span class="job-detail">📍 Austin / Remote</span>
+                                <span class="job-detail">💼 Full-time</span>
+                                <span class="job-detail">💰 $110k - $160k</span>
+                            </div>
+                        </div>
+                        <span class="job-type">Engineering</span>
+                    </div>
+                    <p class="job-description">
+                        We need a talented backend engineer to design and develop robust APIs and microservices. 
+                        Experience with Flask, Django, and cloud platforms is a plus.
+                    </p>
+                    <a href="#contact" class="btn btn-primary">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Ready to Join Us?</h2>
+            </div>
+            <div class="contact-content fade-in-up">
+                <p>
+                    We'd love to hear from you! Whether you're interested in one of our open positions 
+                    or just want to learn more about our company, get in touch with us today.
+                </p>
+                <a href="mailto:careers@company.com" class="btn btn-primary">Contact Us</a>
+                <a href="#jobs" class="btn btn-secondary" style="margin-left: 1rem;">View All Positions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CareerHub. All rights reserved. Building careers, one opportunity at a time.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
-<picture>
-  <source media="(max-width: 600px)" srcset="small.jpg">
-  <source media="(max-width: 900px)" srcset="medium.jpg">
-  <img src="large.jpg" alt="My Image">
-</picture>
