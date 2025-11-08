@@ -9,17 +9,7 @@
 </head>
 <body id="top">
     <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="#top" class="logo">{{company_name}}</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#jobs">Positions</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    {% include 'nav.html' %}
 
     <!-- Hero Section -->
     <section class="hero">
@@ -118,11 +108,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 CareerHub. All rights reserved. Building careers, one opportunity at a time.</p>
-        </div>
-    </footer>
+   {% include 'footer.html' %}
 
     <script>
         // Smooth scrolling for navigation links

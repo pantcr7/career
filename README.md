@@ -3,3 +3,4 @@
 <h1>Design</h1>https://excalidraw.com/
 <h1>Images</h1>https://unsplash.com/
 <h1>Text Generator</h1>https://loremipsum.io/
+<h1>Mail Me</h1>https://mailtolink.me
