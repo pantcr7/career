@@ -23,4 +23,8 @@ engine = create_engine(url_object, connect_args=connect_args)
 # Test query
 with engine.connect() as connection:
     result = connection.execute(text("SELECT * FROM jobs LIMIT 5"))
-    print(result.all())
+    result_dicts = []
+    for row in result.all():
+        result_dicts.append(dict(row._mapping))
+        
+    print(result_dicts)
