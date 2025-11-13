@@ -27,6 +27,9 @@ body {
     background-color: var(--bg-light);
 }
 
+
+
+
 /* Navigation */
 nav {
     background: var(--bg-white);
@@ -340,6 +343,7 @@ footer {
     color: white;
     text-align: center;
     padding: 2rem;
+    margin-top: auto;
 }
 
 footer p {

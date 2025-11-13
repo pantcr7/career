@@ -28,3 +28,16 @@ with engine.connect() as connection:
         result_dicts.append(dict(row._mapping))
         
     print(result_dicts)
+
+def load_job_from_db(id):
+     with engine.connect() as connection:
+         result = connection.execute(
+             text("SELECT * FROM jobs WHERE id = :val"),
+             {"val": id}
+         )
+         rows = result.all()
+         if len(rows) == 0:
+              return None
+         else:
+              return dict(rows[0]._mapping)
+    
