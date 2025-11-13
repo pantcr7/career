@@ -4,12 +4,15 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+db_port = os.getenv("DB_PORT")
+db_port = int(db_port) if db_port else None
+
 url_object = URL.create(
     "mysql+pymysql",
     username=os.getenv("USERNAME"),
     password=os.getenv("PASSWORD"),
     host=os.getenv("HOST"),
-    port=os.getenv("PORT"),
+    port=db_port,
     database=os.getenv("DATABASE"),
     query={"charset": "utf8mb4"},
 )
