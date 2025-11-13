@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify
 from database import engine, text, load_job_from_db
+import os
 
 app = Flask(__name__)
 
@@ -129,5 +130,8 @@ def show_job(id):
     return render_template('jobpage.html', job=job, company_name='CareerHub')
 
 
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
+
