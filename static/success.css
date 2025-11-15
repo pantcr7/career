@@ -1,0 +1,124 @@
+
+    /* Global */
+    :root {
+        --primary: #2563EB;
+        --primary-glow: rgba(37, 99, 235, 0.2);
+        --text-main: #0f172a;
+        --text-light: #475569;
+        --bg: #F1F5F9;
+        --card-bg: rgba(255, 255, 255, 0.75);
+        --border: rgba(255, 255, 255, 0.5);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #f8fafc);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+.page-wrapper {
+    min-height: calc(100vh - 160px); /* subtract navbar + footer height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #dbeafe, #f8fafc);
+}
+
+    /* Glass Card */
+    .card {
+        width: 100%;
+        max-width: 480px;
+        background: var(--card-bg);
+        backdrop-filter: blur(16px);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 40px 35px;
+        text-align: center;
+        box-shadow:
+            0 4px 30px rgba(0, 0, 0, 0.1),
+            0 0 40px var(--primary-glow);
+        animation: fadeInUp 0.65s ease-out;
+    }
+
+    /* Animation */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Lottie */
+    .anim {
+        width: 160px;
+        height: 160px;
+        margin: 0 auto 10px;
+    }
+
+    /* Heading */
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--text-main);
+        margin-bottom: 10px;
+    }
+
+    /* Text */
+    p {
+        color: var(--text-light);
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .highlight {
+        color: var(--primary);
+        font-weight: 600;
+    }
+
+    /* Next Steps Box */
+    .steps-box {
+        background: rgba(255, 255, 255, 0.45);
+        border-radius: 14px;
+        padding: 18px;
+        text-align: left;
+        margin: 25px 0;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .steps-box h4 {
+        color: var(--text-main);
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    .steps-box p {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        color: var(--text-light);
+    }
+
+    /* Button */
+    .btn {
+        display: inline-block;
+        width: 100%;
+        padding: 14px;
+        background: var(--primary);
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 10px;
+        transition: 0.25s ease;
+    }
+
+    .btn:hover {
+        background: #1e40af;
+        box-shadow: 0 6px 18px rgba(37, 99, 235, 0.3);
+        transform: translateY(-2px);
+    }

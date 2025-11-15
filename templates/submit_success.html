@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Submitted!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='success.css') }}">
+    <script src="{{ url_for('static', filename='confetti.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+    <body>
+        {% include 'nav.html' %}
+
+        <div class="page-wrapper">
+            <div class="card">
+
+                <lottie-player
+                    class="anim"
+                    src="https://assets10.lottiefiles.com/packages/lf20_jbrw3hcz.json"
+                    background="transparent"
+                    speed="1"
+                    autoplay>
+                </lottie-player>
+
+                <h2>Application Submitted 🎉</h2>
+
+                <p>
+                    Thank you, <span class="highlight">{{ applicant_name }}</span>!
+                    Your application for the
+                    <span class="highlight">{{ job_title }}</span> position has been received.
+                </p>
+
+                <div class="steps-box">
+                    <h4>What Happens Next?</h4>
+                    <p>
+                        Our recruitment team will carefully review your profile.
+                        If you are shortlisted, you will receive an email from us
+                        with the next steps in the hiring process.
+                    </p>
+                </div>
+
+                <a href="/" class="btn">Go Back to Jobs</a>
+
+            </div>
+        </div>
+
+        {% include 'footer.html' %}
+    </body>
+
+</html>

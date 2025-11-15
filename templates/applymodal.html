@@ -1,0 +1,66 @@
+<div id="applyModal" class="modal-backdrop">
+    <div class="modal-content">
+
+        <header class="modal-header">
+            <h3>Apply for <span>{{job.title}}</span></h3>
+            <button id="closeApplyModal" class="modal-close">&times;</button>
+        </header>
+
+        <form action="/apply-for-job/{{job.id}}" method="POST" enctype="multipart/form-data" class="application-form">
+
+            <div class="form-group">
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-control" 
+                       required
+                       minlength="10"
+                       maxlength="15"
+                       pattern="\d{10,}"
+                       inputmode="numeric"
+                       oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="linkedin_url">LinkedIn Profile URL</label>
+                <input type="url" id="linkedin_url" name="linkedin_url" class="form-control" placeholder="https://linkedin.com/in/your-profile">
+            </div>
+
+            <div class="form-group">
+                <label for="portfolio_url">Portfolio/Website URL (Optional)</label>
+                <input type="url" id="portfolio_url" name="portfolio_url" class="form-control" placeholder="https://your-website.com">
+            </div>
+
+            <div class="form-group">
+                <label for="resume">Upload Resume/CV</label>
+                <label for="resume" class="file-upload-wrapper">
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" >
+                    <div class="file-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <p>Click or drag file to this area to upload</p>
+                    <span>PDF, DOC, DOCX (Max 5MB)</span>
+                </label>
+                <div id="file-name-display"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="cover_letter">Cover Letter (Optional)</label>
+                <textarea id="cover_letter" name="cover_letter" class="form-control" rows="5" placeholder="Tell us why you're a great fit for this role..."></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="apply-btn">Submit Application</button>
+            </div>
+
+        </form>
+    </div>
+</div>

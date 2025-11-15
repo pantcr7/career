@@ -1,0 +1,61 @@
+<div class="container">
+    <a href="/" class="back-link animate-entry">
+        <i class="fas fa-arrow-left"></i> Back to Jobs
+    </a>
+
+    <header class="job-header animate-entry delay-100">
+        <span class="job-category-tag">{{job.category}}</span>
+        <h1 class="job-title">{{job.title}}</h1>
+    </header>
+
+    <div class="job-grid">
+
+        <main class="main-content animate-entry delay-200">
+            <div class="job-section">
+                <h3 class="section-title">Responsibilities</h3>
+                <div class="text-block">
+                    {{job.responsibilities}}
+                </div>
+            </div>
+
+            <div class="job-section">
+                <h3 class="section-title">Requirements</h3>
+                <div class="text-block">
+                    {{job.requirements}}
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar animate-entry delay-300">
+
+            <div class="info-item">
+                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="info-text">
+                    <h4>Location</h4>
+                    <p>{{job.location}}</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="info-text">
+                    <h4>Job Type</h4>
+                    <p>{{job.type}}</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-icon"><i class="fas fa-money-bill-wave"></i></div>
+                <div class="info-text">
+                    <h4>Salary</h4>
+                    <p>{{job.salary}}</p>
+                </div>
+            </div>
+
+            <button id="openApplyModal" class="apply-btn">
+                Apply Now
+            </button>
+        </aside>
+
+    </div>
+</div>

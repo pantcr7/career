@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify,request
 from database import engine, text, load_job_from_db
 import os
 
@@ -129,6 +129,30 @@ def show_job(id):
         return "Not Found", 404
     return render_template('jobpage.html', job=job, company_name='CareerHub')
 
+
+
+@app.route('/apply-for-job/<id>', methods=['POST'])
+def apply_for_job(id):
+    form_data = request.form.to_dict()  
+    add_application_to_db(id, form_data)
+    #files = request.files                   # uploaded files
+
+    return render_template('submit_success.html',applicant_name=form_data['full_name'],company_name='CareerHub')
+
+
+def add_application_to_db(job_id, data):
+    # Combine job_id with the data dictionary
+    params = {'job_id': job_id, **data}
+
+    query = text("""
+        INSERT INTO job_applications 
+        (job_id, full_name, email, phone, linkedin_url, portfolio_url, cover_letter)
+        VALUES (:job_id, :full_name, :email, :phone, :linkedin_url, :portfolio_url, :cover_letter)
+    """)
+
+    # Execute query with context manager
+    with engine.begin() as connection:  # engine.begin() auto-commits
+        connection.execute(query, params)
 
 
 if __name__ == '__main__':
